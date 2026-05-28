@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>The Puppy Butler | Premium Puppy Concierge — Brisbane, Queensland</title>
+  <!-- Google Fonts & Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #FEFCF5;
+      color: #2D2A24;
+      scroll-behavior: smooth;
+      line-height: 1.5;
+    }
+
+    h1, h2, h3, .logo, .nav-links a, .btn, .testimonial-name {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    h1 {
+      font-size: 3.8rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .section-subhead {
+      font-size: 1.1rem;
+      color: #6E5C4F;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* header & nav */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      background: rgba(254, 252, 245, 0.96);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #EADBC6;
+      flex-wrap: wrap;
+    }
+
+    .logo h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #4A3729;
+      margin: 0;
+      letter-spacing: -0.5px;
+    }
+    .logo p {
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      color: #B28B6F;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #2D2A24;
+      transition: 0.2s;
+      font-size: 1rem;
+      letter-spacing: 0.3px;
+    }
+
+    .nav-links a:hover {
+      color: #B77B4A;
+    }
+
+    .menu-icon {
+      font-size: 1.8rem;
+      cursor: pointer;
+      display: none;
+    }
+
+    /* buttons */
+    .btn {
+      display: inline-block;
+      background: #4A3729;
+      color: white;
+      padding: 0.8rem 2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.25s ease;
+      border: none;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid #4A3729;
+      color: #4A3729;
+    }
+
+    .btn-outline:hover {
+      background: #4A3729;
+      color: white;
+    }
+
+    .btn-primary {
+      background: #B77B4A;
+      box-shadow: 0 4px 12px rgba(183, 123, 74, 0.2);
+    }
+    .btn-primary:hover {
+      background: #9C623A;
+      transform: translateY(-2px);
+    }
+
+    /* hero */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+      padding: 3rem 2rem 5rem;
+      background: linear-gradient(135deg, #FFF7EF 0%, #FEF1E4 100%);
+    }
+    .hero-content {
+      flex: 1;
+    }
+    .hero-image {
+      flex: 1;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.15);
+    }
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+    .hero-badge {
+      background: #EADBC6;
+      display: inline-block;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #4A3729;
+    }
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    /* cards grid */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    .service-card, .puppy-card {
+      background: white;
+      border-radius: 28px;
+      padding: 1.8rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.05);
+      transition: all 0.25s;
+      border: 1px solid #F0E2D2;
+    }
+    .service-card:hover, .puppy-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+      border-color: #E2CEB8;
+    }
+    .service-icon {
+      font-size: 2.5rem;
+      color: #B77B4A;
+      margin-bottom: 1rem;
+    }
+    /* Puppy plans — auto-rotating gallery (one photo, fade cycle) */
+    .puppy-plan-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 1.5rem;
+      max-width: 1180px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .puppy-plan-row {
+      background: white;
+      border-radius: 24px;
+      border: 1px solid #F0E2D2;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    .puppy-plan-row-inner {
+      display: flex;
+      flex-direction: column;
+    }
+    @media (min-width: 980px) {
+      .puppy-plan-row-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+      }
+    }
+    .puppy-plan-media {
+      width: 100%;
+      padding: 0;
+      background: #FEFCF5;
+      border-right: 1px solid #F0E2D2;
+    }
+    .plan-gallery {
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .plan-gallery-viewport {
+      position: relative;
+      width: 100%;
+      min-height: 430px;
+      max-height: min(72vh, 760px);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #FEFCF5;
+    }
+    @media (min-width: 980px) {
+      .plan-gallery-viewport {
+        flex: 1;
+        min-height: 100%;
+      }
+    }
+    @media (max-width: 520px) {
+      .plan-gallery-viewport {
+        min-height: 300px;
+        max-height: 60vh;
+      }
+    }
+    .plan-gallery-slide {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      opacity: 0;
+      transition: opacity 0.85s ease-in-out;
+      z-index: 0;
+      position: absolute;
+      inset: 0;
+    }
+    .plan-gallery-slide.is-active {
+      opacity: 1;
+      z-index: 1;
+    }
+    .plan-gallery-ui {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 0.75rem 0.95rem;
+      background: #FEFCF5;
+      border-top: 1px solid #F0E2D2;
+    }
+    .plan-gallery-dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+    .plan-gallery-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: none;
+      padding: 0;
+      background: #D6C2AC;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .plan-gallery-dot:hover {
+      background: #C39E7E;
+    }
+    .plan-gallery-dot.is-active {
+      background: #E8B88C;
+      transform: scale(1.35);
+    }
+    .gallery-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 42px;
+      height: 42px;
+      border: 1px solid #E2CEB8;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92);
+      color: #4A3729;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 4;
+      transition: 0.2s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .gallery-arrow:hover {
+      background: #FFFFFF;
+      border-color: #CFAE91;
+      transform: translateY(-50%) scale(1.04);
+    }
+    .gallery-arrow.prev {
+      left: 14px;
+    }
+    .gallery-arrow.next {
+      right: 14px;
+    }
+    @media (max-width: 600px) {
+      .gallery-arrow {
+        width: 36px;
+        height: 36px;
+      }
+      .gallery-arrow.prev {
+        left: 10px;
+      }
+      .gallery-arrow.next {
+        right: 10px;
+      }
+    }
+    .puppy-plan-body {
+      width: 100%;
+      padding: 1.25rem 1.35rem 1.65rem;
+    }
+    @media (min-width: 640px) {
+      .puppy-plan-body {
+        padding: 1.35rem 1.75rem 1.85rem;
+      }
+    }
+    .plan-jump {
+      text-align: center;
+      font-size: 0.92rem;
+      margin: 0.5rem 0 0;
+    }
+    .plan-jump a {
+      color: #B77B4A;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .plan-jump a:hover {
+      text-decoration: underline;
+    }
+    .plan-price-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem 2rem;
+      margin: 2rem auto 0.5rem;
+      max-width: 900px;
+    }
+    .plan-price-pill {
+      background: white;
+      border: 1px solid #E2CEB8;
+      border-radius: 999px;
+      padding: 0.65rem 1.25rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #4A3729;
+    }
+    .plan-price-pill span {
+      color: #B77B4A;
+      font-weight: 700;
+    }
+    .puppy-plan-detail {
+      margin: 1rem 0 1.1rem;
+      font-size: 0.88rem;
+      color: #4F4A44;
+      line-height: 1.55;
+    }
+    .puppy-plan-detail h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #8A7565;
+      margin: 0.9rem 0 0.35rem;
+      font-weight: 700;
+    }
+    .puppy-plan-detail h4:first-child {
+      margin-top: 0;
+    }
+    .puppy-plan-detail p {
+      margin: 0 0 0.35rem;
+    }
+    .puppy-plan-inclusion {
+      background: #FCF7F0;
+      border-radius: 14px;
+      padding: 0.85rem 1rem;
+      font-size: 0.84rem;
+      color: #5C5248;
+      line-height: 1.5;
+      margin-bottom: 0.85rem;
+      border-left: 3px solid #B77B4A;
+    }
+    .price {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #B77B4A;
+      margin: 0.5rem 0;
+    }
+    .puppy-location {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      color: #6E5C4F;
+      font-size: 0.85rem;
+      margin: 0.5rem 0;
+    }
+    .badge {
+      background: #EEDDCB;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      display: inline-block;
+    }
+    .puppy-meta {
+      display: grid;
+      gap: 0.45rem;
+      margin: 1rem 0 1.2rem;
+      color: #6E5C4F;
+      font-size: 0.9rem;
+    }
+    .puppy-meta div {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .puppy-service-note {
+      margin-top: 0.8rem;
+      font-size: 0.85rem;
+      color: #6E5C4F;
+      background: #FCF7F0;
+      border-radius: 16px;
+      padding: 0.8rem 1rem;
+    }
+    /* steps */
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin: 3rem 0;
+    }
+    .step {
+      flex: 1;
+      min-width: 180px;
+      text-align: center;
+    }
+    .step-number {
+      width: 60px;
+      height: 60px;
+      background: #4A3729;
+      color: white;
+      border-radius: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin: 0 auto 1rem;
+    }
+
+    /* testimonials */
+    .testimonial-carousel {
+      overflow: hidden;
+      margin: 2rem 0;
+    }
+    .testimonial-grid {
+      display: flex;
+      gap: 2rem;
+      transition: transform 0.7s ease;
+      will-change: transform;
+    }
+    .testimonial {
+      background: white;
+      padding: 1.8rem;
+      border-radius: 24px;
+      border-left: 6px solid #B77B4A;
+      flex: 0 0 calc((100% - 4rem) / 3);
+      min-width: calc((100% - 4rem) / 3);
+    }
+    .testimonial i {
+      color: #E2CEB8;
+      font-size: 1.8rem;
+    }
+
+    /* contact form & footer */
+    .contact-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      background: #F9F2E9;
+      border-radius: 32px;
+      padding: 2.5rem;
+      margin: 3rem 0;
+    }
+    .contact-info, .contact-form {
+      flex: 1;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.9rem;
+      margin-bottom: 1rem;
+      border: 1px solid #E2CEB8;
+      border-radius: 20px;
+      background: white;
+      font-family: 'Inter', sans-serif;
+    }
+    footer {
+      background: #2D2A24;
+      color: #EADBC6;
+      padding: 2.5rem 0;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .social i {
+      font-size: 1.3rem;
+      margin: 0 0.6rem;
+      color: #EADBC6;
+      transition: 0.2s;
+    }
+    .social a {
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    /* modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(28, 22, 17, 0.58);
+      backdrop-filter: blur(7px);
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      padding: 1rem;
+    }
+    .modal-content {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FFF9F2 100%);
+      max-width: 500px;
+      width: 90%;
+      padding: 1.4rem;
+      border-radius: 26px;
+      position: relative;
+      animation: fadeUp 0.2s ease;
+      border: 1px solid #E7D5C3;
+      box-shadow: 0 20px 44px rgba(74, 55, 41, 0.26);
+    }
+    .modal-content.modal-content-wide {
+      max-width: 720px;
+      padding: 1.8rem;
+    }
+    .close-modal {
+      position: absolute;
+      right: 1.1rem;
+      top: 0.8rem;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #4A3729;
+      transition: 0.2s;
+    }
+    .close-modal:hover {
+      background: #F5E8D9;
+    }
+    .modal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.9rem;
+    }
+    @media (max-width: 560px) {
+      .modal-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .form-help {
+      font-size: 0.85rem;
+      color: #6E5C4F;
+      margin-top: 0.15rem;
+      margin-bottom: 0.95rem;
+      line-height: 1.45;
+    }
+    .modal-content h3 {
+      margin: 0 2.4rem 0.55rem 0;
+      color: #2F241B;
+      font-size: 1.7rem;
+    }
+    .modal-content form input,
+    .modal-content form textarea {
+      width: 100%;
+      border: 1px solid #DEC9B3;
+      border-radius: 14px;
+      padding: 0.78rem 0.9rem;
+      background: #FFFFFF;
+      color: #2D2A24;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      transition: 0.18s;
+      margin-bottom: 0.8rem;
+      outline: none;
+    }
+    .modal-content form input::placeholder,
+    .modal-content form textarea::placeholder {
+      color: #8E7C6E;
+    }
+    .modal-content form input:focus,
+    .modal-content form textarea:focus {
+      border-color: #B77B4A;
+      box-shadow: 0 0 0 4px rgba(183, 123, 74, 0.14);
+      background: #FFFDF9;
+    }
+    .modal-content form textarea {
+      min-height: 112px;
+      resize: vertical;
+    }
+    #orderModal .modal-content {
+      background:
+        radial-gradient(120% 90% at 0% 0%, rgba(244, 217, 188, 0.45) 0%, rgba(255,255,255,0) 52%),
+        radial-gradient(120% 90% at 100% 100%, rgba(255, 240, 220, 0.52) 0%, rgba(255,255,255,0) 52%),
+        #FFFFFF;
+    }
+    #orderModal .form-help {
+      font-size: 0.9rem;
+    }
+    #orderModal label {
+      display: block;
+      font-size: 0.88rem;
+      margin: 0.1rem 0 0.35rem;
+      color: #4A3729;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    .btn-whatsapp {
+      background: #1FA855;
+      box-shadow: 0 8px 18px rgba(31, 168, 85, 0.24);
+      border: 1px solid rgba(21, 112, 56, 0.28);
+    }
+    .btn-whatsapp:hover {
+      background: #168A44;
+      transform: translateY(-2px);
+    }
+    #orderModal .btn-whatsapp {
+      border-radius: 999px;
+      padding: 0.92rem 1.4rem;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      margin-top: 0.3rem;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+
+    /* tablet + mobile */
+    @media (max-width: 980px) {
+      .container {
+        padding: 0 1.2rem;
+      }
+      .hero {
+        gap: 1.5rem;
+        padding: 2rem 1.2rem 2.8rem;
+      }
+      .hero-content, .hero-image {
+        flex: 1 1 100%;
+      }
+      .hero-image {
+        border-radius: 24px;
+      }
+      .hero-content p {
+        font-size: 1rem !important;
+      }
+      .btn-group {
+        width: 100%;
+      }
+      .btn-group .btn {
+        flex: 1 1 auto;
+        min-width: 185px;
+        text-align: center;
+      }
+      .card-grid {
+        grid-template-columns: 1fr;
+        gap: 1.1rem;
+      }
+      .service-card {
+        border-radius: 20px;
+        padding: 1.25rem;
+      }
+      .puppy-plan-row {
+        border-radius: 20px;
+      }
+      .puppy-plan-media {
+        border-right: none;
+        border-bottom: 1px solid #F0E2D2;
+      }
+      .plan-gallery-viewport {
+        min-height: 360px;
+        max-height: 64vh;
+      }
+      .plan-gallery-ui {
+        padding: 0.65rem 0.7rem 0.85rem;
+      }
+      .puppy-plan-body {
+        padding: 1.1rem 1.05rem 1.25rem;
+      }
+      .contact-wrap {
+        padding: 1.4rem;
+        border-radius: 24px;
+        gap: 1.2rem;
+      }
+      .terms-highlight {
+        border-radius: 18px;
+        padding: 1.2rem 1.05rem;
+      }
+      .terms-highlight h2 {
+        font-size: 1.35rem;
+      }
+      .modal {
+        align-items: flex-start;
+        overflow-y: auto;
+        padding: 1rem 0.75rem;
+      }
+      .modal-content,
+      .modal-content.modal-content-wide {
+        width: 100%;
+        max-width: 640px;
+        border-radius: 20px;
+        padding: 1.05rem;
+      }
+      .modal-content h3 {
+        font-size: 1.35rem;
+        margin-right: 2rem;
+      }
+      .modal-grid {
+        grid-template-columns: 1fr;
+        gap: 0.7rem;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .navbar {
+        padding: 1rem;
+      }
+      .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+        background: #FEFCF5;
+        padding: 1rem 0;
+        border-top: 1px solid #EADBC6;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .menu-icon {
+        display: block;
+      }
+      h1 {
+        font-size: 2.1rem;
+        line-height: 1.18;
+      }
+      h2 {
+        font-size: 1.65rem;
+      }
+      .hero {
+        flex-direction: column;
+        padding: 1.5rem 1rem 2.2rem;
+      }
+      .testimonial {
+        flex: 0 0 100%;
+        min-width: 100%;
+      }
+    }
+    @media (max-width: 640px) {
+      .logo h1 {
+        font-size: 1.45rem;
+      }
+      .logo p {
+        font-size: 0.64rem;
+        letter-spacing: 1.3px;
+      }
+      .hero-badge {
+        font-size: 0.72rem;
+      }
+      .btn-group .btn {
+        width: 100%;
+        min-width: 0;
+      }
+      .plan-price-strip {
+        gap: 0.55rem;
+      }
+      .plan-price-pill {
+        width: 100%;
+        text-align: center;
+      }
+      .plan-jump {
+        font-size: 0.85rem;
+        line-height: 1.45;
+      }
+      .plan-gallery-viewport {
+        min-height: 300px;
+        max-height: 58vh;
+      }
+      .gallery-arrow {
+        width: 34px;
+        height: 34px;
+      }
+      .puppy-plan-detail {
+        font-size: 0.84rem;
+      }
+      .puppy-meta {
+        font-size: 0.86rem;
+      }
+      .contact-wrap {
+        margin: 2rem 0;
+      }
+      footer {
+        padding: 1.8rem 0.8rem;
+      }
+    }
+    @media (max-width: 420px) {
+      .container {
+        padding: 0 0.85rem;
+      }
+      .navbar {
+        padding: 0.8rem 0.7rem;
+      }
+      h1 {
+        font-size: 1.85rem;
+      }
+      h2 {
+        font-size: 1.45rem;
+      }
+      .hero {
+        padding: 1.25rem 0.8rem 1.9rem;
+      }
+      .hero-image {
+        border-radius: 18px;
+      }
+      .plan-gallery-viewport {
+        min-height: 265px;
+      }
+      .modal-content,
+      .modal-content.modal-content-wide {
+        padding: 0.95rem 0.85rem;
+        border-radius: 16px;
+      }
+      .close-modal {
+        right: 0.55rem;
+        top: 0.45rem;
+      }
+      #orderModal .btn-whatsapp {
+        font-size: 0.95rem;
+        padding: 0.82rem 1.1rem;
+      }
+    }
+    .faq-item {
+      background: white;
+      margin-bottom: 1rem;
+      border-radius: 20px;
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+    }
+    .faq-question {
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+    }
+    .faq-answer {
+      display: none;
+      margin-top: 0.8rem;
+      color: #4F4A44;
+      padding-left: 0.5rem;
+      border-left: 2px solid #B77B4A;
+    }
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+    hr {
+      margin: 2rem 0;
+      border-color: #EADBC6;
+    }
+    .service-fee-badge {
+      background: #EADBC6;
+      padding: 0.5rem 1.2rem;
+      border-radius: 50px;
+      display: inline-block;
+      font-weight: 600;
+    }
+    .terms-highlight {
+      background: linear-gradient(135deg, #FFF4E6 0%, #FFE8CC 100%);
+      border: 2px solid #C9956A;
+      border-radius: 24px;
+      padding: 1.75rem 2rem;
+      margin: 3rem 0;
+      box-shadow: 0 8px 24px rgba(183, 123, 74, 0.12);
+    }
+    .terms-highlight h2 {
+      font-size: 1.65rem;
+      color: #4A3729;
+      margin-bottom: 0.75rem;
+    }
+    .terms-highlight p {
+      color: #3D3830;
+      font-size: 0.98rem;
+      margin-bottom: 0.85rem;
+      line-height: 1.6;
+    }
+    .terms-highlight p:last-child {
+      margin-bottom: 0;
+    }
+    .terms-highlight strong {
+      color: #7A4A28;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="logo">
+    <h1>The Puppy Butler</h1>
+    <p>PREMIUM CONCIERGE • BRISBANE, QUEENSLAND</p>
+  </div>
+  <div class="menu-icon" id="menuToggle">
+    <i class="fas fa-bars"></i>
+  </div>
+  <div class="nav-links" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#puppies">Puppies</a>
+    <a href="#howitworks">Process</a>
+    <a href="#terms">Terms</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<main>
+  <!-- Hero section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <span class="hero-badge"><i class="fas fa-paw"></i> Brisbane, Queensland’s trusted puppy concierge</span>
+      <h1>Your perfect puppy,<br>delivered with care.</h1>
+      <p style="font-size: 1.1rem; margin-top: 1rem; color: #4F4A44;">We match you with ethically sourced, vet-checked puppies across Brisbane, Queensland — and handle everything from consultation to coordinated local delivery.</p>
+      <div class="btn-group">
+        <a href="#puppies" class="btn btn-primary"><i class="fas fa-dog"></i> Explore puppies</a>
+        <button class="btn btn-outline" id="openConsultModal"><i class="fas fa-calendar-check"></i> Free consultation</button>
+        <button class="btn btn-whatsapp" id="openOrderModal"><i class="fab fa-whatsapp"></i> Place order</button>
+      </div>
+      <div style="margin-top: 2rem;">
+        <span class="service-fee-badge"><i class="fas fa-star"></i> The Butler Service Fee: $750 (includes matching + vetting + delivery coordination)</span>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="./cute-golden-retriever-puppy.webp" alt="Golden Retriever puppy" width="800" height="600">
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Services -->
+    <section id="services" style="margin: 5rem 0;">
+      <div style="text-align: center;">
+        <h2>White‑Glove Concierge</h2>
+        <p class="section-subhead">We go beyond traditional breeders — personalised, ethical, and stress‑free.</p>
+      </div>
+      <div class="card-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-heart"></i></div>
+          <h3>Personalised Matching</h3>
+          <p>We analyse your lifestyle, home environment, and preferences to find your ideal breed and temperament.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Ethical & Health Verified</h3>
+          <p>All puppies come from registered ethical breeders with DNA tests, vet checks, and vaccination records.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-truck"></i></div>
+          <h3>White‑Glove Delivery</h3>
+          <p>We coordinate safe, climate‑controlled handover to your address across Greater Brisbane and surrounding areas in Queensland.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Puppy plans (puppy photos only) -->
+    <section id="puppies" style="margin: 4rem 0;">
+      <div style="text-align: center;">
+        <h2>Puppy plans</h2>
+        <p class="section-subhead">Each plan uses a full-width photo gallery: one image at a time with a gentle fade, then the next — no awkward empty margins. Scroll Golden Retriever, Poodle, then Husky.</p>
+      </div>
+      <div class="plan-price-strip" aria-label="Puppy plan prices">
+        <div class="plan-price-pill">Golden Retriever <span>$3,500</span></div>
+        <div class="plan-price-pill">Poodle <span>$4,000</span></div>
+        <div class="plan-price-pill">Husky <span>$4,500</span></div>
+      </div>
+      <p style="text-align:center; font-size:0.9rem; color:#6E5C4F; margin-bottom:0.35rem;">All plans: + $750 Butler Service Fee (matching, vetting, delivery coordination).</p>
+      <p class="plan-jump">Jump to: <a href="#plan-golden">Golden Retriever</a> · <a href="#plan-poodle">Poodle</a> · <a href="#plan-husky">Husky</a></p>
+      <div id="puppyContainer" class="puppy-plan-stack"></div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <p><i class="fas fa-check-circle" style="color:#B77B4A;"></i> Litters and colours vary — your Butler confirms availability on enquiry. Other breeds may be quoted separately.</p>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="howitworks" style="margin: 5rem 0;">
+      <div style="text-align: center;">
+        <h2>The Butler Process</h2>
+        <p class="section-subhead">From dream to doorstep — we handle every detail.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="step-number">1</div><h3>Discovery Call</h3><p>We discuss your lifestyle, breed preferences, and timeline.</p></div>
+        <div class="step"><div class="step-number">2</div><h3>Sourcing & Vetting</h3><p>We find ethical breeders, verify health records, and reserve your pup.</p></div>
+        <div class="step"><div class="step-number">3</div><h3>Butler Concierge</h3><p>Vet checks, microchipping, and delivery logistics organised.</p></div>
+        <div class="step"><div class="step-number">4</div><h3>Puppy Arrival</h3><p>We deliver your pup with a starter kit & lifetime support.</p></div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section style="margin: 4rem 0;">
+      <div style="text-align: center;">
+        <h2>Happy tails</h2>
+        <p class="section-subhead">Real families, real puppies.</p>
+      </div>
+      <div class="testimonial-carousel">
+        <div class="testimonial-grid" id="testimonialTrack">
+          <div class="testimonial"><i class="fas fa-quote-left"></i><p style="margin: 1rem 0;">"The Puppy Butler made bringing home our first puppy feel effortless. From health checks to delivery here in Brisbane, every step was handled with such care. Our golden retriever pup settled in from day one."</p><h4>— Sophie & Jack, Paddington, Brisbane</h4></div>
+          <div class="testimonial"><i class="fas fa-quote-left"></i><p style="margin: 1rem 0;">"We wanted a healthy, well-socialised puppy and that is exactly what we got. The Puppy Butler was ethical, professional and genuinely caring throughout the whole journey."</p><h4>— Amelia & Ryan, Bulimba, Brisbane</h4></div>
+          <div class="testimonial"><i class="fas fa-quote-left"></i><p style="margin: 1rem 0;">"Our mini poodle arrived happy, confident and full of personality. You can tell these puppies are raised with love and real attention. It truly felt like a premium concierge experience."</p><h4>— Chloe, New Farm, Brisbane</h4></div>
+          <div class="testimonial"><i class="fas fa-quote-left"></i><p style="margin: 1rem 0;">"We were nervous first-time puppy parents, but everything was simple and reassuring. Our little Moodle settled beautifully into our home and we felt supported at every step."</p><h4>— Hannah & Ben, West End, Brisbane</h4></div>
+          <div class="testimonial"><i class="fas fa-quote-left"></i><p style="margin: 1rem 0;">"Beautiful service, clear communication and an absolutely gorgeous puppy. We did not just find a puppy, we found the perfect new family member for our Queensland home."</p><h4>— Olivia & Daniel, Camp Hill, Brisbane</h4></div>
+          <div class="testimonial"><i class="fas fa-quote-left"></i><p style="margin: 1rem 0;">"The whole experience felt warm, polished and trustworthy. Our Cavoodle arrived healthy, playful and already so well socialised with people. We are completely in love."</p><h4>— Matilda & Cooper, Ascot, Brisbane</h4></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section style="margin: 4rem 0;">
+      <h2 style="text-align: center;">Common questions</h2>
+      <div style="max-width: 800px; margin: 2rem auto;">
+        <div class="faq-item"><div class="faq-question">What are the puppy plan prices? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Golden Retriever puppy plan from $3,500 AUD; Poodle puppy plan from $4,000 AUD; Siberian Husky puppy plan from $4,500 AUD. The $750 Butler Service Fee applies on top of every plan for concierge matching, breeder vetting, paperwork checks, and Brisbane-area delivery coordination.</div></div>
+        <div class="faq-item"><div class="faq-question">What is included in the $750 Butler Service Fee? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Consultation, personalised breed matching within your chosen plan, vetting of breeders, health record verification, coordination of transport and delivery logistics, plus a welcome puppy kit.</div></div>
+        <div class="faq-item"><div class="faq-question">Are your puppies health checked and vaccinated? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Absolutely. All puppies come with vet health certificate, age-appropriate vaccinations, microchip, and a 12-month genetic health guarantee from our partner breeders.</div></div>
+        <div class="faq-item"><div class="faq-question">Where do you deliver? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Our concierge service is centred on Brisbane, Queensland. We coordinate handover across Greater Brisbane and nearby areas using approved, climate-appropriate pet transport partners.</div></div>
+        <div class="faq-item"><div class="faq-question">How long does the matching process take? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Sourcing and preparation vary by litter and breed. Under our standard terms, delivery may take more than one hundred and eighty (180) days from the date your placement is confirmed in writing — see our highlighted terms below. We keep you updated throughout.</div></div>
+      </div>
+    </section>
+
+    <!-- Terms & conditions (highlighted) -->
+    <section id="terms" class="terms-highlight" style="max-width: 900px; margin-left: auto; margin-right: auto;">
+      <h2><i class="fas fa-file-contract" style="color:#B77B4A;"></i> Terms &amp; conditions — delivery timeframe</h2>
+      <p><strong>Delivery window.</strong> By engaging The Puppy Butler, you acknowledge and agree that completion of your puppy placement — including sourcing, veterinary and breeder checks, documentation, and physical delivery or handover to you in Brisbane, Queensland — may take <strong>more than one hundred and eighty (180) calendar days</strong> from the date we confirm your reservation or written agreement (whichever is earlier), unless a different period is expressly agreed in writing by both parties.</p>
+      <p><strong>Estimates, not guarantees.</strong> Dates we discuss are planning estimates only. Breeding cycles, transport availability, regulatory requirements, and animal welfare considerations can affect timing. We will communicate material delays in good faith; the delivery timeframe may exceed 180 days depending on operating conditions.</p>
+      <p><strong>Service area.</strong> Standard delivery coordination applies to addresses in Greater Brisbane and surrounding Queensland locations we confirm as serviceable. Enquiries outside this area may be declined or subject to separate written arrangements and additional fees.</p>
+      <p><strong>Acceptance.</strong> Proceeding with a consultation, waitlist, or paid service fee constitutes your acceptance of these delivery terms. For a full legal agreement, request our complete terms of service before payment.</p>
+    </section>
+
+    <!-- Contact + form -->
+    <section id="contact" class="contact-wrap">
+      <div class="contact-info">
+        <h2><i class="fas fa-feather-alt"></i> Start your journey</h2>
+        <p style="margin: 1rem 0;">Ready to meet your perfect match? Let's talk.</p>
+        <div style="margin: 1.5rem 0;">
+          <i class="fas fa-map-marker-alt"></i> Serving Brisbane, Queensland<br>
+          <i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://api.whatsapp.com/send?phone=61485690292" style="color:#4A3729; font-weight:600; text-decoration:none;">+61 485 690 292</a><br>
+          <i class="fas fa-envelope"></i> hello@thepuppybutler.com.au<br>
+          <i class="fas fa-clock"></i> Mon-Fri 9am–6pm AEST
+        </div>
+        <div class="social">
+          <a href="https://www.instagram.com/thepuppybutler.au?igsh=dDNlOXl5bTZhZjRn" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61590444510581" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Send an enquiry</h3>
+        <form id="contactForm">
+          <input type="text" placeholder="Full name" id="contactName" required>
+          <input type="email" placeholder="Email address" id="contactEmail" required>
+          <textarea rows="3" placeholder="Tell us about your ideal puppy..." id="contactMessage"></textarea>
+          <button type="submit" class="btn btn-primary">Send enquiry via WhatsApp <i class="fab fa-whatsapp"></i></button>
+        </form>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <p>© 2025 The Puppy Butler — Ethical Puppy Concierge, Brisbane, Queensland. <br>All puppies are ethically sourced from registered breeders. Delivery may take more than 180 days as per our <a href="#terms" style="color:#E8C9A8;">terms</a>.</p>
+  <div class="social" style="margin-top: 1rem;">
+    <a href="https://www.instagram.com/thepuppybutler.au?igsh=dDNlOXl5bTZhZjRn" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/profile.php?id=61590444510581" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+  </div>
+</footer>
+
+<!-- Modal for puppy inquiry -->
+<div id="inquiryModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h3><i class="fas fa-paw"></i> Request info</h3>
+    <form id="modalForm">
+      <input type="hidden" id="selectedPuppy">
+      <input type="text" placeholder="Your name" id="modalName" required>
+      <input type="email" placeholder="Your email" id="modalEmail" required>
+      <input type="tel" placeholder="Phone (optional)" id="modalPhone">
+      <label>Plan / breed of interest:</label>
+      <input type="text" id="modalPuppyField" readonly style="background:#F3EFE8; font-weight:500;">
+      <textarea placeholder="Additional questions (delivery is to Brisbane, Queensland)" rows="2" id="modalMessage"></textarea>
+      <button type="submit" class="btn btn-primary" style="width:100%;">Send inquiry via WhatsApp</button>
+    </form>
+  </div>
+</div>
+
+<!-- Modal for placing an order (WhatsApp) -->
+<div id="orderModal" class="modal">
+  <div class="modal-content modal-content-wide">
+    <span class="close-modal" data-close-order>&times;</span>
+    <h3><i class="fab fa-whatsapp"></i> Place an order</h3>
+    <p class="form-help">Complete the details below. When you submit, WhatsApp will open with a pre-filled order message ready to send to our admin team at <strong>+61 485 690 292</strong>.</p>
+    <form id="orderForm">
+      <input type="hidden" id="orderPlan">
+      <div class="modal-grid">
+        <input type="text" placeholder="Full name" id="orderFullName" autocomplete="name" required>
+        <input type="email" placeholder="Email address" id="orderEmail" autocomplete="email" required>
+      </div>
+      <div class="modal-grid">
+        <input type="tel" placeholder="Phone number (example: +977 98XXXXXXXX)" id="orderPhone" autocomplete="tel" required>
+        <input type="text" placeholder="Address (street, suburb, state, postcode)" id="orderAddress" autocomplete="street-address" required>
+      </div>
+      <label>Order specification</label>
+      <input type="text" id="orderSpec" placeholder="Example: Golden Retriever plan, preferred colour, timeframe" required>
+      <label>Order details</label>
+      <textarea id="orderDetails" rows="4" placeholder="Add any extra details (delivery instructions, household info, questions)"></textarea>
+      <button type="submit" class="btn btn-whatsapp" style="width:100%; margin-top:0.6rem;">
+        Send order via WhatsApp <i class="fas fa-paper-plane"></i>
+      </button>
+      <p class="form-help" style="margin-top:0.75rem; margin-bottom:0;">
+        By sending, you consent to sharing your details via WhatsApp for order processing.
+      </p>
+    </form>
+  </div>
+</div>
+
+<script>
+  // mobile menu toggle
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // modal logic
+  const modal = document.getElementById('inquiryModal');
+  const closeModalBtn = document.querySelector('.close-modal');
+  const modalPuppyField = document.getElementById('modalPuppyField');
+  const selectedPuppyInput = document.getElementById('selectedPuppy');
+  const puppyContainer = document.getElementById('puppyContainer');
+  const butlerServiceFee = 750;
+  const ADMIN_WHATSAPP_DISPLAY = '+61 485 690 292';
+  const ADMIN_WHATSAPP_E164 = toWhatsAppPhone(ADMIN_WHATSAPP_DISPLAY);
+
+  const puppyPlans = [
+    {
+      id: 'golden',
+      name: 'Golden Retriever',
+      filterGroup: 'Golden Retriever',
+      location: 'Brisbane, Queensland',
+      price: 3500,
+      images: [
+        './cute-golden-retriever-puppy.webp',
+        './a-golden-retriever-puppy-.webp',
+        './golden-retriever-puppy-.webp',
+        './golden-retriever.webp',
+        './golden-retriever-.webp'
+      ],
+      grooming: 'Medium–high shedding; weekly brush, seasonal coat changes',
+      exercise: 'Moderate–high as adult; puppy play in short sessions',
+      suitability: 'Patient, outgoing families with time for training and coat care',
+      detailBlocks: [
+        { title: 'Coat & home setup', text: 'Soft puppy fluff transitions to a dense double coat. Line brushing, paw wipes, and a cool resting spot after play help your pup stay comfortable in Brisbane warmth.' },
+        { title: 'Daily rhythm', text: 'Several short walks and sniff sessions beat one long hike while joints mature. Add food puzzles and gentle retrieve games to tire the mind without overworking growing legs.' },
+        { title: 'Training focus', text: 'Reward calm greetings, loose-lead steps, and “drop it” early. Goldens aim to please — clear, kind consistency builds a steady family dog.' }
+      ],
+      inclusion: 'This plan price covers your ethically sourced Golden Retriever puppy placement, documented age-appropriate vaccination schedule from the breeder, microchip guidance, genetic health guarantee paperwork as supplied, and our verification of records before handover in Greater Brisbane.'
+    },
+    {
+      id: 'poodle',
+      name: 'Poodle',
+      filterGroup: 'Poodle',
+      location: 'Brisbane, Queensland',
+      price: 4000,
+      images: [
+        './-baby-poodles.webp',
+        './poodle-puppy.webp',
+        './poodle-puppy-.webp',
+        './poodle-puppy-pics.webp',
+        './Poodle.webp',
+        './my-cousin-just-got-a-puppy-toy-poodle-i-lov.webp'
+      ],
+      grooming: 'Curly coat mats without routine; professional trims plus home brushing',
+      exercise: 'Moderate; clever pups need mental work as much as mileage',
+      suitability: 'Homes ready for coat upkeep, brain games, and gentle structure',
+      detailBlocks: [
+        { title: 'Coat & home setup', text: 'Line brushing down to the skin, drying after swims, and safe chew toys protect coat and teeth. A non-slip mat for grooming builds good handling habits from the first week.' },
+        { title: 'Daily rhythm', text: 'Two structured walks plus scentwork or trick training keeps a Poodle pup balanced. Quiet crate or pen naps prevent overtired zoomies.' },
+        { title: 'Training focus', text: 'Channel intelligence into named cues, stationing, and polite door behaviour. Short, upbeat sessions beat long drills for puppies.' }
+      ],
+      inclusion: 'This plan price covers your ethically sourced Poodle puppy placement (size and colour subject to litter availability), documented vaccination schedule, microchip guidance, health guarantee paperwork as supplied, and our pre-handover record check for Brisbane-area delivery.'
+    },
+    {
+      id: 'husky',
+      name: 'Siberian Husky',
+      filterGroup: 'Siberian Husky',
+      location: 'Brisbane, Queensland',
+      price: 4500,
+      images: [
+        './husky-puppy-.webp',
+        './husky-cutest-puppy-picture.webp',
+        './husky-puppy-picture-.webp',
+        './husky-puppy-pictur.webp',
+        './Husky.webp',
+        './husky-.webp',
+        './my-husky-.webp'
+      ],
+      grooming: 'Double coat; never shave; seasonal undercoat blow',
+      exercise: 'High as adult; cool-weather exercise and secure containment essential',
+      suitability: 'Active households with secure fencing and patience for vocal, social dogs',
+      detailBlocks: [
+        { title: 'Coat & home setup', text: 'Airflow, shade, and fresh water matter in Queensland. Teach happy handling of paws, ears, and brushing while young — it pays off during seasonal coat changes.' },
+        { title: 'Daily rhythm', text: 'Fenced sniff sessions, controlled play, and brain games substitute for endless hard pavement miles while growth plates close. Avoid midday heat.' },
+        { title: 'Training focus', text: 'Reliable recall practice on long lines, impulse control around wildlife scents, and calm “settle” cues help city-friendly Huskies. Never rely on an open gate.' }
+      ],
+      inclusion: 'This plan price covers your ethically sourced Siberian Husky puppy placement, documented vaccination schedule, microchip guidance, health guarantee paperwork as supplied, and our verification of records prior to coordinated handover in Greater Brisbane.'
+    }
+  ];
+
+  function openModal(puppyName) {
+    modalPuppyField.value = puppyName;
+    selectedPuppyInput.value = puppyName;
+    modal.style.display = 'flex';
+  }
+
+  function formatCurrency(value) {
+    return `$${value.toLocaleString('en-AU')} AUD`;
+  }
+
+  function renderPuppyPlansStacked() {
+    if(!puppyContainer) return;
+
+    puppyContainer.innerHTML = puppyPlans.map(plan => {
+      const slides = plan.images.map((src, i) =>
+        `<img class="plan-gallery-slide${i === 0 ? ' is-active' : ''}" src="${src}" alt="${plan.name} puppy — photo ${i + 1} of ${plan.images.length}" loading="${i === 0 ? 'eager' : 'lazy'}" decoding="async">`
+      ).join('');
+      const dots = plan.images.map((_, i) =>
+        `<button type="button" class="plan-gallery-dot${i === 0 ? ' is-active' : ''}" data-gallery-dot="${i}" aria-label="Show photo ${i + 1}"></button>`
+      ).join('');
+      const details = plan.detailBlocks.map(b => `<h4>${b.title}</h4><p>${b.text}</p>`).join('');
+      return `
+      <article class="puppy-plan-row" id="plan-${plan.id}">
+        <div class="puppy-plan-row-inner">
+          <div class="puppy-plan-media">
+            <div class="plan-gallery" data-plan-gallery data-slide-count="${plan.images.length}">
+              <div class="plan-gallery-viewport">
+                ${slides}
+                <button type="button" class="gallery-arrow prev" data-gallery-prev aria-label="Previous photo">
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+                <button type="button" class="gallery-arrow next" data-gallery-next aria-label="Next photo">
+                  <i class="fas fa-chevron-right"></i>
+                </button>
+              </div>
+              <div class="plan-gallery-ui">
+                <div class="plan-gallery-dots">${dots}</div>
+              </div>
+            </div>
+          </div>
+          <div class="puppy-plan-body">
+            <h3>${plan.name} <span class="badge">Puppy plan</span></h3>
+            <div class="puppy-location"><i class="fas fa-map-marker-alt"></i> ${plan.location}</div>
+            <div class="price">${formatCurrency(plan.price)}</div>
+            <div class="puppy-plan-inclusion"><strong>Plan includes:</strong> ${plan.inclusion}</div>
+            <div class="puppy-plan-detail">${details}</div>
+            <div class="puppy-meta">
+              <div><i class="fas fa-cut"></i> ${plan.grooming}</div>
+              <div><i class="fas fa-running"></i> ${plan.exercise}</div>
+              <div><i class="fas fa-home"></i> ${plan.suitability}</div>
+            </div>
+            <div class="puppy-service-note"><i class="fas fa-star"></i> Butler Service Fee: $${butlerServiceFee} AUD in addition to the plan price (matching, vetting, delivery coordination).</div>
+            <button type="button" class="btn btn-primary inquireBtn" data-puppy="${plan.name} puppy plan (${formatCurrency(plan.price)} + $${butlerServiceFee} Butler fee)">Enquire about this plan <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </article>`;
+    }).join('');
+    initPlanGalleries();
+  }
+
+  function initPlanGalleries() {
+    document.querySelectorAll('[data-plan-gallery]').forEach(root => {
+      const slides = root.querySelectorAll('.plan-gallery-slide');
+      const dots = root.querySelectorAll('[data-gallery-dot]');
+      const prevBtn = root.querySelector('[data-gallery-prev]');
+      const nextBtn = root.querySelector('[data-gallery-next]');
+      const n = slides.length;
+      if(n <= 1) {
+        const ui = root.querySelector('.plan-gallery-ui');
+        if(ui) ui.style.display = 'none';
+        if(prevBtn) prevBtn.style.display = 'none';
+        if(nextBtn) nextBtn.style.display = 'none';
+        return;
+      }
+
+      let idx = 0;
+      let timer = null;
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      function goTo(i) {
+        idx = (i + n) % n;
+        slides.forEach((el, j) => el.classList.toggle('is-active', j === idx));
+        dots.forEach((el, j) => el.classList.toggle('is-active', j === idx));
+      }
+
+      function tick() {
+        goTo(idx + 1);
+      }
+
+      function start() {
+        if(timer) return;
+        timer = setInterval(tick, 4000);
+      }
+
+      function stop() {
+        if(!timer) return;
+        clearInterval(timer);
+        timer = null;
+      }
+
+      root.addEventListener('mouseenter', stop);
+      root.addEventListener('mouseleave', start);
+
+      root.addEventListener('click', (e) => {
+        const dot = e.target.closest('[data-gallery-dot]');
+        if(dot && root.contains(dot)) {
+          e.preventDefault();
+          const i = parseInt(dot.getAttribute('data-gallery-dot'), 10);
+          if(Number.isNaN(i)) return;
+          stop();
+          goTo(i);
+          start();
+          return;
+        }
+
+        const prev = e.target.closest('[data-gallery-prev]');
+        if(prev && root.contains(prev)) {
+          e.preventDefault();
+          stop();
+          goTo(idx - 1);
+          start();
+          return;
+        }
+
+        const next = e.target.closest('[data-gallery-next]');
+        if(next && root.contains(next)) {
+          e.preventDefault();
+          stop();
+          goTo(idx + 1);
+          start();
+        }
+      });
+
+      root.addEventListener('touchstart', (e) => {
+        if(!e.touches || !e.touches.length) return;
+        touchStartX = e.touches[0].clientX;
+      }, { passive: true });
+
+      root.addEventListener('touchend', (e) => {
+        if(!e.changedTouches || !e.changedTouches.length) return;
+        touchEndX = e.changedTouches[0].clientX;
+        const dx = touchEndX - touchStartX;
+        if(Math.abs(dx) < 45) return;
+        stop();
+        if(dx > 0) goTo(idx - 1);
+        else goTo(idx + 1);
+        start();
+      }, { passive: true });
+
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting) start();
+          else stop();
+        });
+      }, { threshold: 0.15 });
+      io.observe(root);
+
+      start();
+    });
+  }
+
+  puppyContainer?.addEventListener('click', (e) => {
+    if(e.target.closest('[data-gallery-dot]') || e.target.closest('.plan-gallery-viewport')) return;
+    const button = e.target.closest('.inquireBtn');
+    if(!button || !puppyContainer.contains(button)) return;
+    openModal(button.getAttribute('data-puppy'));
+  });
+
+  const consultBtn = document.getElementById('openConsultModal');
+  if(consultBtn) {
+    consultBtn.addEventListener('click', () => {
+      openModal('General consultation request');
+    });
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+  }
+  closeModalBtn.addEventListener('click', closeModal);
+  window.addEventListener('click', (e) => {
+    if(e.target === modal) closeModal();
+  });
+
+  // order modal (WhatsApp order)
+  const orderModal = document.getElementById('orderModal');
+  const openOrderModalBtn = document.getElementById('openOrderModal');
+  const orderForm = document.getElementById('orderForm');
+  const orderPlanInput = document.getElementById('orderPlan');
+  const orderCloseBtn = document.querySelector('[data-close-order]');
+
+  function openOrderModal(planText = '') {
+    if(orderPlanInput) orderPlanInput.value = (planText || '').trim();
+    if(orderModal) orderModal.style.display = 'flex';
+  }
+
+  function closeOrderModal() {
+    if(orderModal) orderModal.style.display = 'none';
+  }
+
+  if(openOrderModalBtn) {
+    openOrderModalBtn.addEventListener('click', () => openOrderModal(''));
+  }
+  if(orderCloseBtn) {
+    orderCloseBtn.addEventListener('click', closeOrderModal);
+  }
+  window.addEventListener('click', (e) => {
+    if(e.target === orderModal) closeOrderModal();
+  });
+
+  function sanitizeForWhatsApp(text) {
+    return (text || '').toString().replace(/\s+/g, ' ').trim();
+  }
+
+  function toWhatsAppPhone(numberText) {
+    // WhatsApp API requires digits only (country code + number, no +, spaces, or dashes).
+    return (numberText || '').toString().replace(/[^\d]/g, '');
+  }
+
+  function buildWhatsAppOrderMessage(payload) {
+    const lines = [
+      'Order Request - The Puppy Butler',
+      '',
+      `Full name: ${payload.fullName}`,
+      `Email: ${payload.email}`,
+      `Phone: ${payload.phone}`,
+      `Address: ${payload.address}`,
+      payload.plan ? `Plan / item: ${payload.plan}` : null,
+      `Order specification: ${payload.spec}`,
+      payload.details ? `Order details: ${payload.details}` : null,
+      '',
+      `Sent from website: ${window.location.href}`
+    ].filter(Boolean);
+    return lines.join('\n');
+  }
+
+  function buildWhatsAppInquiryMessage(payload) {
+    const lines = [
+      'Inquiry - The Puppy Butler',
+      '',
+      `Full name: ${payload.name}`,
+      `Email: ${payload.email}`,
+      payload.phone ? `Phone: ${payload.phone}` : null,
+      payload.plan ? `Plan / breed: ${payload.plan}` : null,
+      payload.message ? `Message: ${payload.message}` : null,
+      '',
+      `Sent from website: ${window.location.href}`
+    ].filter(Boolean);
+    return lines.join('\n');
+  }
+
+  function openWhatsAppWithMessage(messageText) {
+    if(!ADMIN_WHATSAPP_E164) {
+      alert('Admin WhatsApp number is not configured correctly.');
+      return false;
+    }
+    const url = `https://api.whatsapp.com/send?phone=${ADMIN_WHATSAPP_E164}&text=${encodeURIComponent(messageText)}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
+    return true;
+  }
+
+  if(orderForm) {
+    orderForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const fullName = sanitizeForWhatsApp(document.getElementById('orderFullName')?.value);
+      const email = sanitizeForWhatsApp(document.getElementById('orderEmail')?.value);
+      const phone = sanitizeForWhatsApp(document.getElementById('orderPhone')?.value);
+      const address = sanitizeForWhatsApp(document.getElementById('orderAddress')?.value);
+      const spec = sanitizeForWhatsApp(document.getElementById('orderSpec')?.value);
+      const details = sanitizeForWhatsApp(document.getElementById('orderDetails')?.value);
+      const plan = sanitizeForWhatsApp(orderPlanInput?.value);
+
+      if(!fullName || !email || !phone || !address || !spec) {
+        alert('Please fill in full name, email, phone, address, and order specification.');
+        return;
+      }
+
+      const message = buildWhatsAppOrderMessage({
+        fullName,
+        email,
+        phone,
+        address,
+        spec,
+        details,
+        plan
+      });
+
+      const isOpened = openWhatsAppWithMessage(message);
+      if(!isOpened) return;
+
+      orderForm.reset();
+      if(orderPlanInput) orderPlanInput.value = '';
+      closeOrderModal();
+    });
+  }
+
+  // modal form submission
+  const modalForm = document.getElementById('modalForm');
+  modalForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = sanitizeForWhatsApp(document.getElementById('modalName')?.value);
+    const email = sanitizeForWhatsApp(document.getElementById('modalEmail')?.value);
+    const phone = sanitizeForWhatsApp(document.getElementById('modalPhone')?.value);
+    const plan = sanitizeForWhatsApp(selectedPuppyInput?.value);
+    const messageText = sanitizeForWhatsApp(document.getElementById('modalMessage')?.value);
+    if(!name || !email) {
+      alert('Please provide your name and email address.');
+      return;
+    }
+
+    const message = buildWhatsAppInquiryMessage({
+      name,
+      email,
+      phone,
+      plan,
+      message: messageText
+    });
+    const isOpened = openWhatsAppWithMessage(message);
+    if(!isOpened) return;
+
+    modalForm.reset();
+    modalPuppyField.value = '';
+    closeModal();
+  });
+
+  // contact form submission
+  const contactForm = document.getElementById('contactForm');
+  if(contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = sanitizeForWhatsApp(document.getElementById('contactName')?.value);
+      const email = sanitizeForWhatsApp(document.getElementById('contactEmail')?.value);
+      const messageText = sanitizeForWhatsApp(document.getElementById('contactMessage')?.value);
+      if(!name || !email) {
+        alert('Please fill in name and email.');
+        return;
+      }
+
+      const message = buildWhatsAppInquiryMessage({
+        name,
+        email,
+        phone: '',
+        plan: 'General enquiry',
+        message: messageText
+      });
+      const isOpened = openWhatsAppWithMessage(message);
+      if(!isOpened) return;
+
+      contactForm.reset();
+    });
+  }
+
+  // FAQ accordion
+  const faqs = document.querySelectorAll('.faq-item');
+  faqs.forEach(faq => {
+    const questionDiv = faq.querySelector('.faq-question');
+    questionDiv.addEventListener('click', () => {
+      faq.classList.toggle('open');
+      const icon = questionDiv.querySelector('i');
+      if(faq.classList.contains('open')) {
+        icon.classList.remove('fa-chevron-down');
+        icon.classList.add('fa-chevron-up');
+      } else {
+        icon.classList.remove('fa-chevron-up');
+        icon.classList.add('fa-chevron-down');
+      }
+    });
+  });
+
+  // smooth anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if(href === "#" || href === "") return;
+      const target = document.querySelector(href);
+      if(target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+        if(navLinks.classList.contains('active')) navLinks.classList.remove('active');
+      }
+    });
+  });
+
+  // testimonials auto slider
+  const testimonialTrack = document.getElementById('testimonialTrack');
+  let testimonialIndex = 0;
+  let testimonialInterval;
+
+  function getVisibleTestimonials() {
+    return window.innerWidth <= 860 ? 1 : 3;
+  }
+
+  function updateTestimonialSlider() {
+    if(!testimonialTrack) return;
+    const cards = testimonialTrack.querySelectorAll('.testimonial');
+    const visibleCards = getVisibleTestimonials();
+    const maxIndex = Math.max(0, cards.length - visibleCards);
+    if(testimonialIndex > maxIndex) testimonialIndex = 0;
+    if(!cards.length) return;
+
+    const cardWidth = cards[0].getBoundingClientRect().width;
+    const trackStyles = window.getComputedStyle(testimonialTrack);
+    const gap = parseFloat(trackStyles.gap || '0');
+    const offset = testimonialIndex * (cardWidth + gap);
+    testimonialTrack.style.transform = `translateX(-${offset}px)`;
+  }
+
+  function startTestimonialSlider() {
+    if(!testimonialTrack) return;
+    clearInterval(testimonialInterval);
+    testimonialInterval = setInterval(() => {
+      const visibleCards = getVisibleTestimonials();
+      const cards = testimonialTrack.querySelectorAll('.testimonial');
+      const maxIndex = Math.max(0, cards.length - visibleCards);
+      testimonialIndex = testimonialIndex >= maxIndex ? 0 : testimonialIndex + 1;
+      updateTestimonialSlider();
+    }, 2800);
+  }
+
+  window.addEventListener('resize', updateTestimonialSlider);
+  updateTestimonialSlider();
+  startTestimonialSlider();
+  renderPuppyPlansStacked();
+</script>
+</body>
+</html>
